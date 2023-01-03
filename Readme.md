@@ -8,9 +8,33 @@
 <br>
 
 ## MobileNet  
+ - 컴퓨터 성능이 제한되거나 배터리 퍼포먼스가 중요한 곳에서 사용될 목적으로 설계된 CNN구조이다.
+ - 엣지 컴퓨팅
+  - 클라우드에서 모든 연산을 처리하는 것이 아니라, 모바일 디바이스들이 직접 연산을 하거나 edge들에서 데이터 연산을 처리하여 클라우드에 데이터를 뿌려주는 것으로 mobilNet을 사용하려는 환경들이다.
+ - 주요 기술?
+   1. Channel Reduction
+      - 채널 수를 줄인다. 
+   2. Depthwise Separable Convolutions
+      - 연산량은 input channel만큼 연산량이 줄어들게 된다.  
+      ![](images/../code/images/depthwise.png)
+   3. Distillation & Compression
+      - model의 dataset을 압축하는 방법.
+ - 기존의 CNN과의 차이
+   > 한 채널의 변화를 살펴보면 임의의 크기와 채널의 공간이 점 하나로 축소된다.  
+   > Depthwise convolution은 채널 숫자는 줄어들지 않고 한 채널에서의 크기만 줄인다.
+   
+   ![](images/../code/images/mobilenet.png)  
 <br>
 
-## EfficientNet  
+## EfficientNet  -> MobileNet의 기본을 받아서 사용
+ - 적은 parameter 수로 더욱 좋은 성능을 내서 State-Of-The-Art를 달성한 model이다.
+ - 주요 기술?
+  1. Depthwise Separable Convolution
+      - 모든 채널을 한 번에 convolution을 적용하는 것 대신에 이미지 혹은 feature map을 각 채널로 쪼개서 convolution을 적용하여, input의 feature을 일반 convolution보다 적은 양의 parameter로 분류할 수 있다. 
+  2. Squeeze-and-excitation
+     - 필터의 크기가 1로 고정되어 있는 여러 개의 채널을 하나의 새로운 채널로 합치는 역할
+       > 채널의 수를 조절 (차원 감소 -> 연산량 감소)
+
 <br>
 
 ## Transformer  
