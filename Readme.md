@@ -2,6 +2,8 @@
 
 ## ResNet  
  - 이미지 분류에 있어 가장 기본적인 모델이다.
+ - Feture Map Size는 2배로 줄고, 채널의 깊이는 2배로 증가(strides=2)
+   > feture map과 channel의 깊이는 반비례 관계
  - 핵심 로직
    - Shortcut
    - Bottleneck block
