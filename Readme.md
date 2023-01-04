@@ -45,7 +45,7 @@
    > 기존 모델의 경우 encoder, decoder는 각각 한 개에 다른 시점을 가지는 구조  
 
 	![](images/../code/images/transformer.png)
- - 시작 심볼<sos>에서 종료 심볼<eos>이 나올 때까지 연산을 진행한다.
+ - 시작 심볼\<sos>에서 종료 심볼\<eos>이 나올 때까지 연산을 진행한다.
 <br>
 
 ### 주요 파라미터
