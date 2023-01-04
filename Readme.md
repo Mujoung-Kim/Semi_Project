@@ -2,6 +2,8 @@
 
 ## ResNet  
  - 이미지 분류에 있어 가장 기본적인 모델이다.
+ - Feture Map Size는 2배로 줄고, 채널의 깊이는 2배로 증가(strides=2)
+   > feture map과 channel의 깊이는 반비례 관계
  - 핵심 로직
    - Shortcut
    - Bottleneck block
@@ -45,7 +47,7 @@
    > 기존 모델의 경우 encoder, decoder는 각각 한 개에 다른 시점을 가지는 구조  
 
 	![](images/../code/images/transformer.png)
- - 시작 심볼<sos>에서 종료 심볼<eos>이 나올 때까지 연산을 진행한다.
+ - 시작 심볼\<sos>에서 종료 심볼\<eos>이 나올 때까지 연산을 진행한다.
 <br>
 
 ### 주요 파라미터
